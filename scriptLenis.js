@@ -1,7 +1,7 @@
 console.log("script.js works");
 
 const lenis = new Lenis({
-  duration: 1.4,
+  duration: 1.3,
   smoothWheel: true,
   /*
   syncTouch: true,
