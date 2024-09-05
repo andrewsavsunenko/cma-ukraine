@@ -1,1 +1,1 @@
-console.log("github works");
+console.log("releases check");
