@@ -9,6 +9,7 @@ if (lang=="uk-UA" && !ls){
     localStorage.setItem('languageState', 1);
 }
 
+/*
 //adding "click" on language switch
 const b1 = document.getElementById('eng1');
 const b2 = document.getElementById('eng2');
@@ -23,3 +24,4 @@ function bClick(){
 b1.addEventListener("click", bClick);
 b2.addEventListener("click", bClick);
 b3.addEventListener("click", bClick);
+*/
