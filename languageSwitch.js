@@ -16,6 +16,7 @@ const b3 = document.getElementById('eng3');
 function bClick(){
     localStorage.setItem('languageState', 1);
     console.log("click Eng 1");
+    console.log(b1.innerText);
 }
 
 b1.addEventListener("click", bClick);
