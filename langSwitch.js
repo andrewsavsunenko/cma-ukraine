@@ -1,6 +1,6 @@
-var lang = navigator.language.code;
+var lang = navigator.language;
 
-if (navigator.language.code=="uk"){
+if (lang=="uk-UA"){
     window.location.href = 'https://www.cmaukraine.com/ua';
 }
     
