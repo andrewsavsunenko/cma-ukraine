@@ -1,7 +1,15 @@
 document.addEventListener("DOMContentLoaded", (event) => {
-   //gsap.registerPlugin(ScrollTrigger)
+
+    let typeSplit = new SplitType("[text-split]",{
+        types: "words",
+        tagName: "span"
+    });
+
+    //gsap.registerPlugin(ScrollTrigger)
     
-    let loopTml = gsap.timeline({repeat:-1, yoyo: true});
+    let loopTml = gsap.timeline({
+        
+    });
     
     loopTml.from("gsapTest", {
         scale: 1.4,
