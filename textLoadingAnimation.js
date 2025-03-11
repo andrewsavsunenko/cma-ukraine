@@ -7,8 +7,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
         scale: 1.4,
         duration: 0.5,
         ease: "power2.out"
-        
     })
 
-
+    console.log("gsap works");
 });
