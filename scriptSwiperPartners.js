@@ -9,5 +9,3 @@ const partnersSwiper = new Swiper(".swiper.partners", {
     nextEl: ".partners__arrow--wrapper.left",
   },
 });
-
-console.log("swiper work");
