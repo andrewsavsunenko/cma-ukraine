@@ -314,9 +314,9 @@ class App {
             : i === 5
             ? "top 54%" // for 5th item
             : "top 72%" // for the rest
-          : i % 2 == 0
-          ? "top 82%"
-          : "top 80%", // on mobile
+          : i % 2 == 0 // on mobile
+          ? "top 82%" // for 2nd item
+          : "top 80%", // for 1st item
         onEnter: () => {
           tm.play();
         },
