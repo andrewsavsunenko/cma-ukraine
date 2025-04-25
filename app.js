@@ -300,7 +300,7 @@ class App {
         },
         {
           yPercent: this.isDesktop ? 0 : -100,
-          duration: this.isDesktop ? 1.2 : 1.8,
+          duration: this.isDesktop ? 1.2 : 1.4,
           ease: "power2.out",
           stagger: { each: 0.12 },
         }
