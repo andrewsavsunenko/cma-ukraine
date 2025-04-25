@@ -1,16 +1,15 @@
 const partnersSwiper = new Swiper(".swiper.partners", {
   // Optional parameters
   direction: "horizontal",
-  loop: true,
-  slidesPerView: 1,
+  slidesPerView: 1.6,
   //slidesPerGroup: 2,
   spaceBetween: 4,
-  loop: true,
+  loop: false,
   allowTouchMove: false,
 
   // Navigation arrows
   navigation: {
-    nextEl: ".partners__arrow--wrapper.right",
-    prevEl: ".partners__arrow--wrapper.left",
+    prevEl: ".partners__arrow--wrapper.right",
+    nextEl: ".partners__arrow--wrapper.left",
   },
 });
