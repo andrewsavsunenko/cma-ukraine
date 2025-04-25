@@ -1,12 +1,7 @@
 const partnersSwiper = new Swiper(".swiper.partners", {
-  direction: "horizontal",
   slidesPerView: 1.6,
-
-  autoplay: { delay: 2000 },
-
   spaceBetween: 4,
-  loop: false,
-  allowTouchMove: false,
+  allowTouchMove: true,
 
   // Navigation arrows
   navigation: {
