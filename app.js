@@ -263,7 +263,7 @@ class App {
         },
         {
           yPercent: -140,
-          duration: 2.4,
+          duration: 3.2,
           ease: "power3.out",
           stagger: { each: 0.12 },
         }
