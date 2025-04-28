@@ -5,7 +5,7 @@ const partnersSwiper = new Swiper(".swiper.partners", {
 
   // Navigation arrows
   navigation: {
-    prevEl: ".partners__arrow--wrapper.right",
-    nextEl: ".partners__arrow--wrapper.left",
+    prevEl: ".partners__arrow--wrapper.left",
+    nextEl: ".partners__arrow--wrapper.right",
   },
 });
