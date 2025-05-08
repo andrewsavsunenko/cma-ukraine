@@ -10,9 +10,9 @@ class liqpayForm {
     this.tabChange();
     this.donationButtonClick();
 
-    this.formSubmit();
-    this.dataForm();
-    this.signatureForm();
+    //this.formSubmit();
+    //this.dataForm();
+    //this.signatureForm();
   }
 
   currencyChange() {
