@@ -19,6 +19,7 @@ class liqpayForm {
     this.currencySelector.addEventListener("change", (el) => {
       let selectedCurrency =
         el.target.options[el.target.selectedIndex].innerHTML;
+
       this.donationButtons.forEach((btn) => {
         btn.querySelector(".donationButtonCurrency").innerHTML =
           selectedCurrency;
