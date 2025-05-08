@@ -2,9 +2,7 @@ class liqpayForm {
   constructor() {
     this.tabs = [...document.querySelectorAll(".donationTab")];
     this.inputField = document.querySelector(".form__field.donationValue");
-    this.currencySelector = document.querySelector(
-      ".select__field.currencySelector"
-    );
+    this.currencySelector = document.getElementById("currencySelector");
     this.donationButtons = [...document.querySelectorAll(".donationButton")];
     this.submitButton = document.querySelector(".submitButton.liqpay");
 
