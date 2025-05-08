@@ -22,7 +22,11 @@ class liqpayForm {
       this.donationButtons.forEach((btn) => {
         btn.querySelector(".donationButtonCurrency").innerHTML =
           selectedCurrency;
+        console.log(
+          "button = " + btn.querySelector(".donationButtonValue").innerHTML
+        );
       });
+
       console.log("currency = " + selectedCurrency);
     });
   }
