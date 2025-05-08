@@ -28,9 +28,9 @@ class liqpayForm {
   }
 
   tabChange() {
-    tabs.forEach((tab) => {
+    this.tabs.forEach((tab) => {
       tab.addEventListener("click", () => {
-        tabs.forEach((el) => el.classList.remove("clicked"));
+        this.tabs.forEach((el) => el.classList.remove("clicked"));
         tab.classList.add("clicked");
       });
     });
