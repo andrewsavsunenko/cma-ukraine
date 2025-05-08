@@ -24,6 +24,7 @@ class liqpayForm {
         btn.querySelector(".donationButtonCurrency").innerHTML =
           selectedCurrency;
       });
+      console.log("currency = " + selectedCurrency);
     });
   }
 
@@ -33,14 +34,16 @@ class liqpayForm {
         this.tabs.forEach((el) => el.classList.remove("clicked"));
         tab.classList.add("clicked");
       });
+      console.log("tab = clicked");
     });
   }
 
   donationButtonClick() {
     this.donationButtons.forEach((btn) => {
       btn.addEventListener("click", (e) => {
-        const selectedValue = btn.querySelector(".donationValue").innerHTML;
-        this.inputField.value = selectedValue;
+        const addedValue = btn.querySelector(".donationValue").innerHTML;
+        this.inputField.value += addedValue;
+        console.log("inputValue = " + this.inputField.value);
       });
     });
   }
