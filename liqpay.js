@@ -1,10 +1,12 @@
 class liqpayForm {
   constructor() {
-    this.tabs = [...document.querySelectorAll(".donationTab")];
-    this.inputField = document.querySelector(".form__field.donationValue");
-    this.currencySelector = document.getElementById("currencySelector");
-    this.donationButtons = [...document.querySelectorAll(".donationButton")];
-    this.submitButton = document.querySelector(".submitButton.liqpay");
+    this.tabs = [...document.querySelectorAll("[liqpayDonationTab]")];
+    this.inputField = document.getElementById("liqpayInput");
+    this.currencySelector = document.getElementById("liqpayCurrencySelector");
+    this.donationButtons = [
+      ...document.querySelectorAll("[liqpayDonationButton]"),
+    ];
+    this.submitButton = document.getElementById("liqpaySubmitButton");
 
     this.currencyChange();
     this.tabChange();
