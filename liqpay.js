@@ -16,16 +16,16 @@ class liqpayForm {
     //this.dataForm();
     //this.signatureForm();
 
-    this.log();
+    //this.log();
   }
 
-  log() {
-    console.log(this.tabs);
-    console.log(this.inputField);
-    console.log(this.currencySelector);
-    console.log(this.donationButtons);
-    console.log(this.submitButton);
-  }
+  //   log() {
+  //     console.log(this.tabs);
+  //     console.log(this.inputField);
+  //     console.log(this.currencySelector);
+  //     console.log(this.donationButtons);
+  //     console.log(this.submitButton);
+  //   }
 
   currencyChange() {
     this.currencySelector.addEventListener("change", (el) => {
