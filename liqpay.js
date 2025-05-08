@@ -33,11 +33,10 @@ class liqpayForm {
         el.target.options[el.target.selectedIndex].innerHTML;
 
       this.donationButtons.forEach((btn) => {
-        btn.querySelector(".donationButtonCurrency").innerHTML =
-          selectedCurrency;
-        console.log(
-          "button = " + btn.querySelector(".donationButtonValue").innerHTML
-        );
+        btn.querySelectorAll(".donationButtonCurrency").forEach((el) => {
+          el.innerHTML = selectedCurrency;
+          console.log("button = " + el.innerHTML);
+        });
       });
 
       console.log("currency = " + selectedCurrency);
