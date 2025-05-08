@@ -13,6 +13,16 @@ class liqpayForm {
     //this.formSubmit();
     //this.dataForm();
     //this.signatureForm();
+
+    this.log();
+  }
+
+  log() {
+    console.log(this.tabs);
+    console.log(this.inputField);
+    console.log(this.currencySelector);
+    console.log(this.donationButtons);
+    console.log(this.submitButton);
   }
 
   currencyChange() {
@@ -45,7 +55,7 @@ class liqpayForm {
   donationButtonClick() {
     this.donationButtons.forEach((btn) => {
       btn.addEventListener("click", (e) => {
-        const addedValue = btn.querySelector(".donationValue").innerHTML;
+        const addedValue = e.querySelector(".donationValue").innerHTML;
         this.inputField.value += addedValue;
         console.log("inputValue = " + this.inputField.value);
       });
