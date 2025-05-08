@@ -33,10 +33,9 @@ class liqpayForm {
         el.target.options[el.target.selectedIndex].innerHTML;
 
       this.donationButtons.forEach((btn) => {
-        btn.querySelectorAll(".donationButtonCurrency").forEach((el) => {
-          el.innerHTML = selectedCurrency;
-          console.log("button = " + el.innerHTML);
-        });
+        btn.querySelector("[donationButtonCurrency]").innerHTML =
+          selectedCurrency;
+        console.log("button = " + selectedCurrency);
       });
 
       console.log("currency = " + selectedCurrency);
@@ -56,7 +55,7 @@ class liqpayForm {
   donationButtonClick() {
     this.donationButtons.forEach((btn) => {
       btn.addEventListener("click", (e) => {
-        const addedValue = e.querySelector(".donationValue").innerHTML;
+        const addedValue = e.querySelector("[donationButtonValue]").innerHTML;
         this.inputField.value += addedValue;
         console.log("inputValue = " + this.inputField.value);
       });
