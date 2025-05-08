@@ -55,8 +55,8 @@ class liqpayForm {
   donationButtonClick() {
     this.donationButtons.forEach((btn) => {
       btn.addEventListener("click", function () {
-        const addedValue = btn.querySelector("[donationButtonValue]").innerHTML;
-        this.inputField.value += addedValue;
+        //const addedValue = btn.querySelector("[donationButtonValue]").innerHTML;
+        this.inputField.value += 100;
         console.log("inputValue = " + this.inputField.value);
       });
     });
