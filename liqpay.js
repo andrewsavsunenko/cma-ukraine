@@ -92,7 +92,7 @@ class liqpayForm {
       format[10].value,
     ];
 
-    return finalDate.join("");
+    return "id" + finalDate.join("");
   }
 
   formGenerate() {
