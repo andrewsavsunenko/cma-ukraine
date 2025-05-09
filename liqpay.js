@@ -114,9 +114,10 @@ class liqpayForm {
       order_id: this.getDate(), // order id
     });
 
-    console.log(json_string);
+    console.log("json - " + json_string);
 
     const data = btoa(json_string);
+    console.log("data - " + data);
 
     const sign_string =
       "sandbox_YHV3x3Dx7oSe0jwtHmJI0SUmYyvhxP41USzDVIQk" +
@@ -124,6 +125,7 @@ class liqpayForm {
       "sandbox_YHV3x3Dx7oSe0jwtHmJI0SUmYyvhxP41USzDVIQk";
 
     const signature = btoa(this.sha1(sign_string));
+    console.log("signature - " + signature);
 
     //generating liqpay form
     const liqpayFormHTML = `
