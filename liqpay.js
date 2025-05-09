@@ -103,7 +103,7 @@ class liqpayForm {
 
     // generating data and signature
     const json_string = JSON.stringify({
-      public_key: "sandbox_i34877559416",
+      public_key: "i34877559416",
       version: "3",
       action: tabValue, // pay or subsribe
       amount: this.inputField.value, // amount
@@ -120,9 +120,9 @@ class liqpayForm {
     console.log("data - " + data);
 
     const sign_string =
-      "sandbox_YHV3x3Dx7oSe0jwtHmJI0SUmYyvhxP41USzDVIQk" +
+      "YHV3x3Dx7oSe0jwtHmJI0SUmYyvhxP41USzDVIQk" +
       data +
-      "sandbox_YHV3x3Dx7oSe0jwtHmJI0SUmYyvhxP41USzDVIQk";
+      "YHV3x3Dx7oSe0jwtHmJI0SUmYyvhxP41USzDVIQk";
 
     console.log("sign_string - " + sign_string);
     const signature = btoa(this.sha1(sign_string));
