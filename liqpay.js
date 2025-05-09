@@ -102,7 +102,7 @@ class liqpayForm {
     const tabValue = activeTab.getAttribute("liqpayTabAction");
 
     // generating data and signature
-    json_string = JSON.stringify({
+    const json_string = JSON.stringify({
       public_key: "sandbox_i34877559416",
       version: "3",
       action: tabValue, // pay or subsribe
@@ -114,14 +114,14 @@ class liqpayForm {
       order_id: this.getDate(), // order id
     });
 
-    data = btoa(json_string);
+    const data = btoa(json_string);
 
-    sign_string =
+    const sign_string =
       "sandbox_YHV3x3Dx7oSe0jwtHmJI0SUmYyvhxP41USzDVIQk" +
       data +
       "sandbox_YHV3x3Dx7oSe0jwtHmJI0SUmYyvhxP41USzDVIQk";
 
-    signature = btoa(sha1(sign_string));
+    const signature = btoa(sha1(sign_string));
 
     //generating liqpay form
     const liqpayFormHTML = `
