@@ -111,7 +111,7 @@ class liqpayForm {
         this.currencySelector.options[this.currencySelector.selectedIndex]
           .innerHTML, //currency
       description: "test",
-      order_id: getDate(), // order id
+      order_id: this.getDate(), // order id
     });
 
     data = btoa(json_string);
