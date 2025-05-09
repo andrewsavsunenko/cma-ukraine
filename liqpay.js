@@ -124,6 +124,7 @@ class liqpayForm {
       data +
       "sandbox_YHV3x3Dx7oSe0jwtHmJI0SUmYyvhxP41USzDVIQk";
 
+    console.log("sign_string - " + sign_string);
     const signature = btoa(this.sha1(sign_string));
     console.log("signature - " + signature);
 
