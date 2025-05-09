@@ -92,7 +92,8 @@ class liqpayForm {
       format[10].value,
     ];
 
-    return "id" + finalDate.join("");
+    let result = "id" + finalDate.join("") + Math.floor(Math.random() * 10);
+    return result;
   }
 
   formGenerate() {
@@ -136,8 +137,8 @@ class liqpayForm {
       </form>
     `;
 
-    //this.liqpayKeyFormHolder.innerHTML = liqpayFormHTML;
-    //this.liqpayKeyFormHolder.querySelector("form").submit();
+    this.liqpayKeyFormHolder.innerHTML = liqpayFormHTML;
+    this.liqpayKeyFormHolder.querySelector("form").submit();
   }
 
   submitButtonClick() {
