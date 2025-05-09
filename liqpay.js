@@ -135,7 +135,7 @@ class liqpayForm {
     `;
 
     this.liqpayKeyFormHolder.innerHTML = liqpayFormHTML;
-    this.liqpayKeyFormHolder.querySelector("form").submit();
+    //this.liqpayKeyFormHolder.querySelector("form").submit();
   }
 
   submitButtonClick() {
