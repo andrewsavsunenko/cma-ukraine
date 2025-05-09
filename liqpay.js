@@ -114,6 +114,8 @@ class liqpayForm {
       order_id: this.getDate(), // order id
     });
 
+    console.log(json_string);
+
     const data = btoa(json_string);
 
     const sign_string =
