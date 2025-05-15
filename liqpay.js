@@ -99,13 +99,15 @@ class liqpayForm {
     const json_string = JSON.stringify({
       public_key: "i69188530090",
       version: "3",
-      action: tabValue, // pay or subsribe
+      action: tabValue, // pay or subscribe
       amount: this.inputField.value, // amount
       currency:
         this.currencySelector.options[this.currencySelector.selectedIndex]
           .innerHTML, //currency
-      description: "test",
+      description:
+        tabValue == "pay" ? "One-Time Donation" : "Monthly Subscription",
       order_id: this.getDate(), // order id
+      result_url: "https://www.cmaukraine.com",
     });
 
     console.log("json - " + json_string);
