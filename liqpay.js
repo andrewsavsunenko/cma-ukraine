@@ -153,13 +153,13 @@ class liqpayForm {
       subscribe_date_start: this.getDate("date"),
       order_id: this.getDate("id"), // "id" + "Date" + "RandomNumber"
       result_url: "https://www.cmaukraine.com",
-      paytypes: "card,liqpay,privat24,apay,gpay,qr",
+      paytype: "apay",
     });
 
-    console.log("json - " + json_string);
+    //console.log("json - " + json_string);
 
     const data = btoa(json_string);
-    console.log("data - " + data);
+    //console.log("data - " + data);
 
     //iOEJDUxsal5ZbNSIXVGo4Z0hxwM8GfnA0uiQ6Yxt
     const sign_string =
@@ -167,9 +167,9 @@ class liqpayForm {
       data +
       "sandbox_YHV3x3Dx7oSe0jwtHmJI0SUmYyvhxP41USzDVIQk";
 
-    console.log("sign_string - " + sign_string);
+    //console.log("sign_string - " + sign_string);
     const signature = btoa(this.sha1(sign_string));
-    console.log("signature - " + signature);
+    //console.log("signature - " + signature);
 
     //generating liqpay form
     const liqpayFormHTML = `
