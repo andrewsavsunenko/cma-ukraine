@@ -153,7 +153,6 @@ class liqpayForm {
       subscribe_date_start: this.getDate("date"),
       order_id: this.getDate("id"), // "id" + "Date" + "RandomNumber"
       result_url: "https://www.cmaukraine.com",
-      paytype: "apay",
     });
 
     //console.log("json - " + json_string);
