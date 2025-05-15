@@ -179,6 +179,9 @@ class liqpayForm {
     `;
 
     this.liqpayKeyFormHolder.innerHTML = liqpayFormHTML;
+    this.liqpayKeyFormHolder
+      .querySelector("form")
+      .setAttribute("target", "_blank");
     this.liqpayKeyFormHolder.querySelector("form").submit();
   }
 
