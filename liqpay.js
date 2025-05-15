@@ -96,6 +96,7 @@ class liqpayForm {
     const tabValue = activeTab.getAttribute("liqpayTabAction");
 
     // generating data and signature
+
     const json_string = JSON.stringify({
       public_key: "i69188530090",
       version: "3",
@@ -107,7 +108,7 @@ class liqpayForm {
       description:
         tabValue == "pay" ? "One-Time Donation" : "Monthly Subscription",
 
-      subscribe_periodicity: "monthly",
+      subscribe_periodicity: "month",
       order_id: this.getDate(), // "id" + "Date" + "RandomNumber"
       result_url: "https://www.cmaukraine.com",
     });
