@@ -61,7 +61,7 @@ class liqpayForm {
     return CryptoJS.SHA1(message).toString(CryptoJS.enc.Latin1);
   }
 
-  getDate() {
+  getDate(tp) {
     var currentDate = new Date();
     //console.log(currentDate.toUTCString());
     var format = new Intl.DateTimeFormat("en", {
@@ -75,17 +75,35 @@ class liqpayForm {
       timeZone: "UTC",
     }).formatToParts(currentDate);
 
-    // year,month,day,hour,minute,second
-    var finalDate = [
-      format[4].value,
-      format[0].value,
-      format[2].value,
-      format[6].value,
-      format[8].value,
-      format[10].value,
-    ];
+    let result = "";
 
-    let result = "id" + finalDate.join("") + Math.floor(Math.random() * 10);
+    // year,month,day,hour,minute,second
+    if (tp == "date") {
+      var finalDate = [
+        format[4].value,
+        "-",
+        format[0].value,
+        "-",
+        format[2].value,
+        " ",
+        format[6].value,
+        ":",
+        format[8].value,
+        ":",
+        format[10].value,
+      ];
+      result = finalDate.join("");
+    } else if (tp == "id") {
+      var finalDate = [
+        format[4].value,
+        format[0].value,
+        format[2].value,
+        format[6].value,
+        format[8].value,
+        format[10].value,
+      ];
+      result = "id" + finalDate.join("") + Math.floor(Math.random() * 10);
+    }
     return result;
   }
 
@@ -109,7 +127,8 @@ class liqpayForm {
         tabValue == "pay" ? "One-Time Donation" : "Monthly Subscription",
 
       subscribe_periodicity: "month",
-      order_id: this.getDate(), // "id" + "Date" + "RandomNumber"
+      subscribe_date_start: this.getDate("date"),
+      order_id: this.getDate("id"), // "id" + "Date" + "RandomNumber"
       result_url: "https://www.cmaukraine.com",
     });
 
