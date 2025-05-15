@@ -106,7 +106,9 @@ class liqpayForm {
           .innerHTML, //currency
       description:
         tabValue == "pay" ? "One-Time Donation" : "Monthly Subscription",
-      order_id: this.getDate(), // order id
+
+      subscribe_periodicity: "monthly",
+      order_id: this.getDate(), // "id" + "Date" + "RandomNumber"
       result_url: "https://www.cmaukraine.com",
     });
 
