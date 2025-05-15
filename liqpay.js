@@ -57,15 +57,12 @@ class liqpayForm {
 
   /// Liqpay Build
 
-  async sha1(str) {
-    const encoder = new TextEncoder();
-    const data = encoder.encode(str);
-    const hashBuffer = await crypto.subtle.digest("SHA-1", data);
-    const hashArray = Array.from(new Uint8Array(hashBuffer));
-    const hashHex = hashArray
-      .map((b) => b.toString(16).padStart(2, "0"))
-      .join("");
-    return hashHex;
+  sha1_cryptojs(message) {
+    // CryptoJS.SHA1 returns a WordArray object.
+    // .toString(CryptoJS.enc.Latin1) or .toString(CryptoJS.enc.Binary)
+    // converts it to a binary string suitable for btoa.
+    // Avoid .toString() or .toString(CryptoJS.enc.Hex) if you're passing to btoa directly.
+    return CryptoJS.SHA1(message).toString(CryptoJS.enc.Latin1); // Or CryptoJS.enc.Binary
   }
 
   getDate() {
@@ -126,7 +123,7 @@ class liqpayForm {
       "iOEJDUxsal5ZbNSIXVGo4Z0hxwM8GfnA0uiQ6Yxt";
 
     console.log("sign_string - " + sign_string);
-    const signature = btoa(this.sha1(sign_string));
+    const signature = btoa(this.sha1_cryptojs(sign_string));
     console.log("signature - " + signature);
 
     //generating liqpay form
