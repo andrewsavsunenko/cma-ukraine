@@ -57,12 +57,8 @@ class liqpayForm {
 
   /// Liqpay Build
 
-  sha1_cryptojs(message) {
-    // CryptoJS.SHA1 returns a WordArray object.
-    // .toString(CryptoJS.enc.Latin1) or .toString(CryptoJS.enc.Binary)
-    // converts it to a binary string suitable for btoa.
-    // Avoid .toString() or .toString(CryptoJS.enc.Hex) if you're passing to btoa directly.
-    return CryptoJS.SHA1(message).toString(CryptoJS.enc.Latin1); // Or CryptoJS.enc.Binary
+  sha1(message) {
+    return CryptoJS.SHA1(message).toString(CryptoJS.enc.Latin1);
   }
 
   getDate() {
@@ -123,7 +119,7 @@ class liqpayForm {
       "iOEJDUxsal5ZbNSIXVGo4Z0hxwM8GfnA0uiQ6Yxt";
 
     console.log("sign_string - " + sign_string);
-    const signature = btoa(this.sha1_cryptojs(sign_string));
+    const signature = btoa(this.sha1(sign_string));
     console.log("signature - " + signature);
 
     //generating liqpay form
