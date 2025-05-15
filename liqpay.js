@@ -48,13 +48,19 @@ class liqpayForm {
 
         if (tab.getAttribute("liqpayTabAction") == "subscribe") {
           if (this.locale.startsWith("/en/")) {
-            this.submitButton.innerHTML = "+ Donate Monthly";
+            this.submitButton.value = "+ Donate Monthly";
           } else if (this.locale.startsWith("/ua/")) {
-            this.submitButton.innerHTML = "+ Підтримати щомісячно";
+            this.submitButton.value = "+ Підтримати щомісячно";
           }
 
           this.cancelWrapper.style.display = "flex";
         } else {
+          if (this.locale.startsWith("/en/")) {
+            this.submitButton.value = "+ Donate";
+          } else if (this.locale.startsWith("/ua/")) {
+            this.submitButton.value = "+ Підтримати";
+          }
+
           this.cancelWrapper.style.display = "none";
         }
       });
