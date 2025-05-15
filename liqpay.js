@@ -1,5 +1,6 @@
 class liqpayForm {
   constructor() {
+    this.locale = window.location.pathname;
     this.tabs = [...document.querySelectorAll("[liqpayDonationTab]")];
     this.inputField = document.getElementById("liqpayInput");
     this.currencySelector = document.getElementById("liqpayCurrencySelector");
@@ -8,6 +9,9 @@ class liqpayForm {
     ];
     this.submitButton = document.getElementById("liqpaySubmitButton");
     this.liqpayKeyFormHolder = document.getElementById("liqpayKeyFormHolder");
+    this.cancelWrapper = document.getElementById(
+      "liqpaySubscriptionCancelWrapper"
+    );
 
     this.currencyChange();
     this.tabChange();
@@ -41,6 +45,18 @@ class liqpayForm {
       tab.addEventListener("click", () => {
         this.tabs.forEach((el) => el.classList.remove("clicked"));
         tab.classList.add("clicked");
+
+        if (tab.getAttribute("liqpayTabAction") == "subscribe") {
+          if (this.locale.startsWith("/en/")) {
+            this.submitButton.innerHTML = "+ Donate Monthly";
+          } else if (this.locale.startsWith("/ua/")) {
+            this.submitButton.innerHTML = "+ Підтримати щомісячно";
+          }
+
+          this.cancelWrapper.style.display = "flex";
+        } else {
+          this.cancelWrapper.style.display = "none";
+        }
       });
     });
   }
@@ -104,6 +120,7 @@ class liqpayForm {
       ];
       result = "id" + finalDate.join("") + Math.floor(Math.random() * 10);
     }
+
     return result;
   }
 
